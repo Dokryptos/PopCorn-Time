@@ -2,7 +2,7 @@ import './Main.css'
 
 function Movie(props){
     return(
-        <div key={props.id} className="card">
+        <div key={props} className="card">
 
         {props.imgURL 
         ? <img src={props.imgURL} />
@@ -22,7 +22,7 @@ function Movie(props){
         { props.rating > 8 && <p>THIS MOVIE IS AMAZING</p>}
 
         <p>{props.year}</p>
-        <button onClick={ () => {props.deleteMovie(props.id)}} className="btn-delete">delete</button>
+        <button onClick={ () => {props.deleteMovie(props.title)}} className="btn-delete">delete</button>
 
     </div>
     )
